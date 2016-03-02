@@ -1,0 +1,7 @@
+*.iml
+QuAudioApp/.gradle
+QuAudioApp/local.properties
+QuAudioApp/.idea/
+QuAudioApp/.DS_Store
+QuAudioApp/build
+QuAudioApp/captures
