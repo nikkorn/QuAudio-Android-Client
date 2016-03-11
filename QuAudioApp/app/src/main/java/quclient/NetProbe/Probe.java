@@ -28,7 +28,9 @@ public class Probe implements Runnable{
         try {
             // Create a socket on which to probe for a response from the Qu Server
             Socket probeSocket = new Socket();
-            probeSocket.connect(new InetSocketAddress(address, C.PROBE_PORT), C.PROBE_SOCKET_CONNECT_TIMEOUT);
+            try {
+                probeSocket.connect(new InetSocketAddress(address, C.PROBE_PORT), C.PROBE_SOCKET_CONNECT_TIMEOUT);
+            } catch (IOException e) {}
 
             // Set socket timeout as the target will in most cases not respond
             probeSocket.setSoTimeout(C.PROBE_SOCKET_READ_TIMEOUT);
