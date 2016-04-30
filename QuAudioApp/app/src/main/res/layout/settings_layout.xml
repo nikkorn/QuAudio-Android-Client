@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/quDeviceSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/qu_orange_background_small"
+        android:orientation="horizontal"
+        android:layout_marginBottom="2.5dp">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="AVAILABLE DEVICES"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:ellipsize="end"/>
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true" >
+            <Button
+                android:id="@+id/doScanButton"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="5dp"
+                android:background="@drawable/qu_search" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ConnectedDevicesListView" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/quUsernameBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/qu_orange_background_small"
+        android:orientation="horizontal"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="2.5dp" >
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="USERNAME"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:ellipsize="end"/>
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true" >
+            <Button
+                android:id="@+id/editUserNameButton"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="5dp"
+                android:background="@drawable/qu_edit_white" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="Default-User"
+        android:ellipsize="end"/>
+</LinearLayout>
